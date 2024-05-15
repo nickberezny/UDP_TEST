@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
+	<LicenseInfo>
+		<SystemId>{B622564D-9EF5-2339-E1F5-A5B2B079A364}</SystemId>
+		<IssueTime>2024-05-01T16:56:00</IssueTime>
+		<ExpireTime>2024-05-09T00:00:00</ExpireTime>
+		<LicenseKey>9f4fbe905be943565a25201f45e5b18122fd5c3a3f6f883e591b49170fe105a7d377731e84999f3c4baa3df14fcaea934be64274e92fa344cbcbd354e55756a78331bd2be0005850d6ab9ea0f18dac5ca6b956c77744fde173ddd92d76a58132aed6a11389fd1b408394106a60e43eeb2a0365f944f19f46efc7b7de6740db06f785f16dc3f235f52c4be567b31544aa82bdbf95b6a4b27eb41da65d203f0a7deb84df21cd6b1f88984621976cf5a63d49cabbfb7f1d00d376cfd6f50a588691ee620e38e78b1da40af7fd2cdd3d690e58829d2bf33f73871716bdd10bd7f29925c5eca887cdb38d91f91751df87f3abdaf267e4a80dcc21568a738a30a1ff46</LicenseKey>
+		<License>
+			<LicenseId>{96F8FBEB-48D6-4061-A973-35866BF21BE0}</LicenseId>
+			<Name>TC3 Interface For Matlab Simulink</Name>
+			<OrderNo>TE1410</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{73C71EBD-104A-4EE6-955D-ADE86A37EFC3}</LicenseId>
+			<Name>TC3 Target For Simulink</Name>
+			<OrderNo>TE1400</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{AD7F40C3-F160-4413-83E3-6B7656A795A2}</LicenseId>
+			<Name>TC3 C++ / MatSim</Name>
+			<OrderNo>TC1320</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{2D6F11C0-6F75-4E5D-A07D-D83A5E0C9F10}</LicenseId>
+			<Name>Runtime for MATLAB / Simulink</Name>
+			<OrderNo>TF1400</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
+			<Name>TC3 ADS</Name>
+			<OrderNo>TC1000</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{081AC839-28D0-49CA-9792-72680E1F3249}</LicenseId>
+			<Name>TC3 TCP/UDP RT</Name>
+			<OrderNo>TF6311</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+			<Name>TC3 C++</Name>
+			<OrderNo>TC1300</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{3FF18E97-7754-401B-93FB-70544DE28A13}</LicenseId>
+			<Name>TC3 IO</Name>
+			<OrderNo>TC1100</OrderNo>
+		</License>
+	</LicenseInfo>
+</TcLicenseInfo>

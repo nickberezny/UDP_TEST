@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TctGeneratedModules>
+   <ModuleInfo CLSID="{0E638245-436F-A1A4-E010-4681BCF75ADB}" GUID="{0E638245-436F-A1A4-E010-4681BCF75ADB}" LibraryId="TE140x Module Vendor|TestForceSim|0.0.0.1">
+      <BlockDiagram>
+         <Name>TestForceSim</Name>
+         <Identifier>&lt;Root&gt;</Identifier>
+         <Type>root</Type>
+         <Position h="0" w="0" x="0" y="0"/>
+         <BlockDesign/>
+         <Block>
+            <Name>F1</Name>
+            <Identifier>&lt;Root&gt;/F1</Identifier>
+            <Type>Inport</Type>
+            <Position h="14" w="30" x="-405" y="-67"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+               <Image>
+                  <Placeholder Name="Port" Value="1"/>
+               </Image>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Outport</Type>
+               <Position x="-370" y="-60"/>
+               <IsConnected>1</IsConnected>
+               <Line>
+                  <Point x="-370" y="-60"/>
+                  <Point x="-355" y="-60"/>
+               </Line>
+               <Signal Category="Input" Name="F1" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.F1</GlobalName>
+                  <AdsIdxOffs>#x80000000</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>F2</Name>
+            <Identifier>&lt;Root&gt;/F2</Identifier>
+            <Type>Inport</Type>
+            <Position h="14" w="30" x="-405" y="-27"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+               <Image>
+                  <Placeholder Name="Port" Value="2"/>
+               </Image>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Outport</Type>
+               <Position x="-370" y="-20"/>
+               <IsConnected>1</IsConnected>
+               <Line>
+                  <Point x="-370" y="-20"/>
+                  <Point x="-355" y="-20"/>
+               </Line>
+               <Signal Category="Input" Name="F2" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.F2</GlobalName>
+                  <AdsIdxOffs>#x80000008</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>F3</Name>
+            <Identifier>&lt;Root&gt;/F3</Identifier>
+            <Type>Inport</Type>
+            <Position h="14" w="30" x="-405" y="13"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+               <Image>
+                  <Placeholder Name="Port" Value="3"/>
+               </Image>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Outport</Type>
+               <Position x="-370" y="20"/>
+               <IsConnected>1</IsConnected>
+               <Line>
+                  <Point x="-370" y="20"/>
+                  <Point x="-355" y="20"/>
+               </Line>
+               <Signal Category="Input" Name="F3" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.F3</GlobalName>
+                  <AdsIdxOffs>#x80000010</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>T1</Name>
+            <Identifier>&lt;Root&gt;/T1</Identifier>
+            <Type>Inport</Type>
+            <Position h="14" w="30" x="-265" y="-67"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+               <Image>
+                  <Placeholder Name="Port" Value="4"/>
+               </Image>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Outport</Type>
+               <Position x="-230" y="-60"/>
+               <IsConnected>1</IsConnected>
+               <Line>
+                  <Point x="-230" y="-60"/>
+                  <Point x="-220" y="-60"/>
+               </Line>
+               <Signal Category="Input" Name="T1" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.T1</GlobalName>
+                  <AdsIdxOffs>#x80000018</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>count</Name>
+            <Identifier>&lt;Root&gt;/count</Identifier>
+            <Type>Inport</Type>
+            <Position h="14" w="30" x="-555" y="-67"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+               <Image>
+                  <Placeholder Name="Port" Value="5"/>
+               </Image>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Outport</Type>
+               <Position x="-520" y="-60"/>
+               <IsConnected>1</IsConnected>
+               <Line>
+                  <Point x="-520" y="-60"/>
+                  <Point x="-465" y="-60"/>
+                  <Point x="-465" y="65"/>
+                  <Point x="-105" y="65"/>
+               </Line>
+               <Signal Category="Input" Name="count" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.count</GlobalName>
+                  <AdsIdxOffs>#x80000020</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>Terminator1</Name>
+            <Identifier>&lt;Root&gt;/Terminator1</Identifier>
+            <Type>Terminator</Type>
+            <Position h="20" w="20" x="-350" y="-70"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Inport</Type>
+               <Position x="-365" y="-60"/>
+               <IsConnected>1</IsConnected>
+               <Source>
+                  <BlockIdentifier>&lt;Root&gt;/F1</BlockIdentifier>
+                  <PortType>Outport</PortType>
+                  <PortNo>1</PortNo>
+               </Source>
+               <Signal Category="Input" Name="F1" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.F1</GlobalName>
+                  <AdsIdxOffs>#x80000000</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>Terminator2</Name>
+            <Identifier>&lt;Root&gt;/Terminator2</Identifier>
+            <Type>Terminator</Type>
+            <Position h="20" w="20" x="-350" y="-30"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Inport</Type>
+               <Position x="-365" y="-20"/>
+               <IsConnected>1</IsConnected>
+               <Source>
+                  <BlockIdentifier>&lt;Root&gt;/F2</BlockIdentifier>
+                  <PortType>Outport</PortType>
+                  <PortNo>1</PortNo>
+               </Source>
+               <Signal Category="Input" Name="F2" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.F2</GlobalName>
+                  <AdsIdxOffs>#x80000008</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>Terminator3</Name>
+            <Identifier>&lt;Root&gt;/Terminator3</Identifier>
+            <Type>Terminator</Type>
+            <Position h="20" w="20" x="-350" y="10"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Inport</Type>
+               <Position x="-365" y="20"/>
+               <IsConnected>1</IsConnected>
+               <Source>
+                  <BlockIdentifier>&lt;Root&gt;/F3</BlockIdentifier>
+                  <PortType>Outport</PortType>
+                  <PortNo>1</PortNo>
+               </Source>
+               <Signal Category="Input" Name="F3" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.F3</GlobalName>
+                  <AdsIdxOffs>#x80000010</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>Terminator6</Name>
+            <Identifier>&lt;Root&gt;/Terminator6</Identifier>
+            <Type>Terminator</Type>
+            <Position h="20" w="20" x="-215" y="-70"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Inport</Type>
+               <Position x="-230" y="-60"/>
+               <IsConnected>1</IsConnected>
+               <Source>
+                  <BlockIdentifier>&lt;Root&gt;/T1</BlockIdentifier>
+                  <PortType>Outport</PortType>
+                  <PortNo>1</PortNo>
+               </Source>
+               <Signal Category="Input" Name="T1" ReadOnly="true">
+                  <GlobalName>TestForceSim_U.T1</GlobalName>
+                  <AdsIdxOffs>#x80000018</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <Block>
+            <Name>Count</Name>
+            <Identifier>&lt;Root&gt;/Count</Identifier>
+            <Type>Outport</Type>
+            <Position h="14" w="30" x="-100" y="58"/>
+            <BlockDesign>
+               <Border>
+                  <svg height="1" width="1"/>
+               </Border>
+               <Image>
+                  <Placeholder Name="Port" Value="1"/>
+               </Image>
+            </BlockDesign>
+            <Port>
+               <Type No="1">Inport</Type>
+               <Position x="-115" y="65"/>
+               <IsConnected>1</IsConnected>
+               <Source>
+                  <BlockIdentifier>&lt;Root&gt;/count</BlockIdentifier>
+                  <PortType>Outport</PortType>
+                  <PortNo>1</PortNo>
+               </Source>
+               <Signal Category="Output" Name="Count" ReadOnly="true">
+                  <GlobalName>TestForceSim_Y.Count</GlobalName>
+                  <AdsIdxOffs>#x81000000</AdsIdxOffs>
+               </Signal>
+            </Port>
+         </Block>
+         <SubsystemHierarchy>
+            <Subsystem>
+               <ID>&lt;Root&gt;</ID>
+            </Subsystem>
+         </SubsystemHierarchy>
+         <DebugInfo>
+            <SourceFile>
+               <Name>TestForceSim.cpp</Name>
+               <Path>C:\TwinCAT\Functions\TE14xx-ToolsForMatlabAndSimulink\TestForceSim_tcgrt\TestForceSim.cpp</Path>
+               <CodeSection CommentStartLine="33" EndLine="36" Method="TestForceSim_step" StartLine="34">
+                  <Block>&lt;Root&gt;/Count</Block>
+               </CodeSection>
+            </SourceFile>
+         </DebugInfo>
+      </BlockDiagram>
+      <DefaultValues>
+         <Value>
+            <Name>TaskOid</Name>
+         </Value>
+         <Value>
+            <Name>TaskPriority</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>TaskCycleTimeNs</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>TaskPort</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>TaskSortOrder</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>TraceLevelMax</Name>
+            <EnumText>tlInfo</EnumText>
+         </Value>
+         <Value>
+            <Name>ModuleCaller</Name>
+            <EnumText>CyclicTask</EnumText>
+         </Value>
+         <Value>
+            <Name>CallerVerification</Name>
+            <EnumText>Default</EnumText>
+         </Value>
+         <Value>
+            <Name>StepSizeAdaptation</Name>
+            <EnumText>RequireMatchingTaskCycleTime</EnumText>
+         </Value>
+         <Value>
+            <Name>ExecutionSequence</Name>
+            <EnumText>UpdateBeforeOutputMapping</EnumText>
+         </Value>
+         <Value>
+            <Name>Execute</Name>
+            <EnumText>TRUE</EnumText>
+         </Value>
+         <Value>
+            <Name>AccessLockState</Name>
+            <EnumText>TCOM_STATE_OP</EnumText>
+         </Value>
+         <Value>
+            <Name>InitExceptionHandling</Name>
+            <EnumText>CallerExceptions</EnumText>
+         </Value>
+         <Value>
+            <Name>UpdateExceptionHandling</Name>
+            <EnumText>CallerExceptions</EnumText>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.MatlabVersion[0]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.MatlabVersion[1]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.MatlabVersion[2]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.MatlabVersion[3]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.TE140xVersion[0]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.TE140xVersion[1]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.TE140xVersion[2]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>ModuleGeneratorInfo.TE140xVersion[3]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelName</Name>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.SimulinkVersion[0]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.SimulinkVersion[1]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.SimulinkVersion[2]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.SimulinkVersion[3]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelVersion[0]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelVersion[1]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelVersion[2]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelVersion[3]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelChecksum[0]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelChecksum[1]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelChecksum[2]</Name>
+            <Value>0</Value>
+         </Value>
+         <Value>
+            <Name>SimulinkModelInfo.ModelChecksum[3]</Name>
+            <Value>0</Value>
+         </Value>
+      </DefaultValues>
+      <ModuleParameters>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="WRITE">
+            <Name>CallBy</Name>
+            <Category>Module parameters</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="WRITE">
+            <Name>ExecutionSequence</Name>
+            <Category>Module parameters</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="WRITE">
+            <Name>StepSizeAdaptation</Name>
+            <Category>Module parameters</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="">
+            <Name>Initialized</Name>
+            <Category>Monitoring</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="">
+            <Name>CycleUpdateExecuted</Name>
+            <Category>Monitoring</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="" StartupValueAccess="">
+            <Name>ModuleInfo</Name>
+            <Category>Module identification</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="" OnlineValueAccess="READONLY" StartupValueAccess="">
+            <Name>ModuleBuildInfo</Name>
+            <Category>Module identification</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="WRITE" StartupValueAccess="WRITE">
+            <Name>Execute</Name>
+            <Category>Module parameters</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="">
+            <Name>SimulinkTime</Name>
+            <Category>Monitoring</Category>
+         </Parameter>
+         <Parameter DefaultValueAccess="READONLY" OnlineValueAccess="READONLY" StartupValueAccess="">
+            <Name>AccessLockState</Name>
+            <Category>Module parameters</Category>
+         </Parameter>
+      </ModuleParameters>
+      <BlockDesigns>
+         <BlockDesign>
+            <Type>Inport</Type>
+            <Border>
+               <svg height="30" id="svg3009" version="1.1" width="60">
+                  <defs id="defs3011"/>
+                  <metadata id="metadata3014"/>
+                  <g id="layer1" transform="translate(0,-1022.3622)">
+                     <rect height="28.121166" id="rect2996" ry="14.060583" style="fill:none;stroke:#000000;stroke-width:1.87883461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" width="58.121166" x="0.9394173" y="1023.3016"/>
+                  </g>
+               </svg>
+            </Border>
+            <Image>
+               <svg height="30" id="svg3009" version="1.1" width="60">
+                  <defs id="defs3011"/>
+                  <metadata id="metadata3014"/>
+                  <text id="text3010" style="font-size:8px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans" x="30" xml:space="preserve" y="15"><tspan id="tspan3012" x="30" y="15">Block::Port</tspan></text></svg>
+            </Image>
+         </BlockDesign>
+         <BlockDesign>
+            <Type>Terminator</Type>
+            <Image>
+               <svg height="100" id="svg3009" version="1.1" width="100">
+                  <defs id="defs3011"/>
+                  <metadata id="metadata3014"/>
+                  <g id="layer1" transform="translate(0,-952.36218)">
+                     <g id="g3036" style="stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none">
+                        <path d="m 13.571429,50.357143 66.428571,0" id="path3032" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="translate(0,952.36218)"/>
+                        <path d="m 32.143,26.785714 47.857,0 0,47.5 -47.857,0" id="path3034" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="translate(0,952.36218)"/>
+                     </g>
+                  </g>
+               </svg>
+            </Image>
+         </BlockDesign>
+         <BlockDesign>
+            <Type>Outport</Type>
+            <Border>
+               <svg height="30" id="svg3009" version="1.1" width="60">
+                  <defs id="defs3011"/>
+                  <metadata id="metadata3014"/>
+                  <g id="layer1" transform="translate(0,-1022.3622)">
+                     <rect height="28.121166" id="rect2996" ry="14.060583" style="fill:none;stroke:#000000;stroke-width:1.87883461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" width="58.121166" x="0.9394173" y="1023.3016"/>
+                  </g>
+               </svg>
+            </Border>
+            <Image>
+               <svg height="30" id="svg3009" version="1.1" width="60">
+                  <defs id="defs3011"/>
+                  <metadata id="metadata3014"/>
+                  <text id="text3010" style="font-size:8px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans" x="30" xml:space="preserve" y="15"><tspan id="tspan3012" x="30" y="15">Block::Port</tspan></text></svg>
+            </Image>
+         </BlockDesign>
+      </BlockDesigns>
+   </ModuleInfo>
+</TctGeneratedModules>
