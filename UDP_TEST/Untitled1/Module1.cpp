@@ -134,7 +134,10 @@ HRESULT CModule1::SetObjStatePS(PTComInitDataHdr pInitData)
 // Register with other TwinCAT objects
 HRESULT CModule1::SetObjStateSO()
 {
+
+	
 	HRESULT hr = S_OK;
+	
 	//START EDITING
 	if (SUCCEEDED(hr) && m_spudpProt.HasOID())
 	{
@@ -151,8 +154,10 @@ HRESULT CModule1::SetObjStateSO()
 		}
 	}
 
+	HRESULT hr2 = S_OK;
+	uint64_t dataToSend = 0x43003412; //set bias 
+	hr2 = m_spudpProt->SendData(3232235787, 10547, 57219, 8, &dataToSend, false);
 	
-
 	// If following call is successful the CycleUpdate method will be called,
 		// eventually even before method has been left.
 		hr = FAILED(hr) ? hr : AddModuleToCaller();
@@ -167,24 +172,13 @@ HRESULT CModule1::SetObjStateSO()
 	//END EDITING
 
 	//Setup Force Sensor
-
-	HRESULT hr2 = S_OK;
-	uint64_t dataToSend = 0x43003412; //set bias 
-	hr2 = m_spudpProt->SendData(3232235787, 547, 57219, 8, &dataToSend, false);
-
-	if (m_Parameter.data1 == 0)
-	{
-		HRESULT hr2 = S_OK;
-		uint64_t dataToSend = 0x02003412; //start stream
-		hr2 = m_spudpProt->SendData(3232235787, 547, 57219, 8, &dataToSend, false);
-		m_Parameter.data1 = 1;
-		m_Trace.Log(tlVerbose, FENTERA"hr2 = % x", hr2);
-	}
-
-	m_Parameter.data1 = 0;
+	dataToSend = 0x02003412; //start stream
+	hr2 = m_spudpProt->SendData(3232235787, 10547, 57219, 8, &dataToSend, false);
 
 	m_Trace.Log(tlVerbose, FLEAVEA "bias hr=0x%08x", hr2);
+	
 	return hr;
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -193,7 +187,7 @@ HRESULT CModule1::SetObjStateOS()
 {
 
 	uint64_t dataToSend = 0x00003412; //stop stream
-	m_spudpProt->SendData(3232235787, 547, 57219, 8, &dataToSend, false);
+	m_spudpProt->SendData(3232235787, 10547, 57219, 8, &dataToSend, false);
 
 
 	m_Trace.Log(tlVerbose, FENTERA);
@@ -212,9 +206,6 @@ HRESULT CModule1::SetObjStateSP()
 {
 	HRESULT hr = S_OK;
 	m_Trace.Log(tlVerbose, FENTERA);
-
-	// TODO: Add deinitialization code
-
 	m_Trace.Log(tlVerbose, FLEAVEA "hr=0x%08x", hr);
 	return hr;
 }
@@ -223,16 +214,6 @@ HRESULT CModule1::SetObjStateSP()
 HRESULT CModule1::CycleUpdate(ITcTask* ipTask, ITcUnknown* ipCaller, ULONG_PTR context)
 {
 	HRESULT hr = S_OK;
-	
-
-	
-
-	
-	
-	//m_Trace.Log(tlVerbose, FENTERA"hr2 = % x", hr2);
-
-
-	// TODO: Replace the sample with your cyclic code
 	m_counter+=m_Inputs.Value;
 	m_Outputs.Value=m_counter;
 	m_spudpProt->CheckReceived();
@@ -285,14 +266,6 @@ VOID CModule1::RemoveModuleFromCaller()
 HRESULT CModule1::ReceiveData(ULONG ipAddr, USHORT udpDestPort, USHORT udpSrcPort, ULONG nData, PVOID pData, ETYPE_VLAN_HEADER* pVlan)
 {
 	HRESULT hr = S_OK;
-	// mirror incomming data
-	//hr = m_spudpProt->SendData(ipAddr, udpSrcPort, udpDestPort, nData, pData, true);
-	//m_Trace.Log(tlVerbose, FLEAVEA "UDP ReceiveData: IP: %d.%d.%d.%d udpSrcPort: %d,udpDestPort: %d DataSize: %d (hr2=%x) \n",
-	//	((PBYTE)&ipAddr)[3], ((PBYTE)&ipAddr)[2], ((PBYTE)&ipAddr)[1], ((PBYTE)&ipAddr)[0],
-	//	udpSrcPort, udpDestPort, nData, hr);
-	//m_Trace.Log(tlVerbose, FLEAVEA "IP %ld", ipAddr);
-
-	//int32_t(*fdata)[9] = int32_t(*[9]) pData;
 	int32_t* fdata = static_cast<int32_t*>(pData);
 
 	reverseBits(&fdata[0]);
@@ -305,15 +278,13 @@ HRESULT CModule1::ReceiveData(ULONG ipAddr, USHORT udpDestPort, USHORT udpSrcPor
 	reverseBits(&fdata[7]);
 	reverseBits(&fdata[8]);
 
-	if((double)fdata[1] - m_Outputs.count != 1) m_Trace.Log(tlVerbose, FLEAVEA "Count: %f Prev: %f\n", (double)fdata[1], m_Outputs.count);
-
 	m_Outputs.count = (double)fdata[1];
 	m_Outputs.F1 = (double)fdata[3] / 1000000.0;
 	m_Outputs.F2 = (double)fdata[4] / 1000000.0;
 	m_Outputs.F3 = (double)fdata[5] / 1000000.0;
 	m_Outputs.T1 = (double)fdata[6] / 1000000.0;
-
-	//if((long int)m_Outputs.count % 1000 == 0) m_Trace.Log(tlVerbose, FLEAVEA "Count: %f\n", m_Outputs.count);
+	m_Outputs.T2 = (double)fdata[7] / 1000000.0;
+	m_Outputs.T3 = (double)fdata[8] / 1000000.0;
 
 	return hr;
 }

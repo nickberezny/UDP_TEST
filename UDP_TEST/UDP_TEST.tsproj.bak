@@ -1122,7 +1122,7 @@
 				</Target>
 			</Licenses>
 			<Tasks>
-				<Task Id="2" Priority="1" CycleTime="5000" AmsPort="350" AdtTasks="true">
+				<Task Id="2" Priority="1" CycleTime="10000" AmsPort="350" AdtTasks="true">
 					<Name>Task 1</Name>
 				</Task>
 				<Task Id="3" Priority="2" CycleTime="50000" AmsPort="351" AdtTasks="true">
@@ -1368,7 +1368,7 @@
 						</Parameters>
 						<DataAreas>
 							<DataArea>
-								<AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
+								<AreaNo AreaType="InputDst" CreateSymbols="true" ShowSymbols="true">0</AreaNo>
 								<Name>TestForceSim_U</Name>
 								<ContextId>0</ContextId>
 								<ByteSize>40</ByteSize>
@@ -1767,7 +1767,7 @@
 									<OTCID>#x02010020</OTCID>
 								</ManualConfig>
 								<Priority>1</Priority>
-								<CycleTime>500000</CycleTime>
+								<CycleTime>1000000</CycleTime>
 							</Context>
 						</Contexts>
 						<Interfaces>
@@ -1850,7 +1850,7 @@
 								<AreaNo AreaType="OutputSrc">1</AreaNo>
 								<Name>Outputs</Name>
 								<ContextId>1</ContextId>
-								<ByteSize>52</ByteSize>
+								<ByteSize>68</ByteSize>
 								<Symbol>
 									<Name>Value</Name>
 									<BitSize>32</BitSize>
@@ -1899,6 +1899,18 @@
 									<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
 									<BitOffs>352</BitOffs>
 								</Symbol>
+								<Symbol>
+									<Name>T2</Name>
+									<BitSize>64</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+									<BitOffs>416</BitOffs>
+								</Symbol>
+								<Symbol>
+									<Name>T3</Name>
+									<BitSize>64</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+									<BitOffs>480</BitOffs>
+								</Symbol>
 							</DataArea>
 						</DataAreas>
 						<InterfacePointers>
@@ -1917,7 +1929,7 @@
 						<ParameterValues>
 							<Value>
 								<Name>TraceLevelMax</Name>
-								<EnumText>tlVerbose</EnumText>
+								<EnumText>tlAlways</EnumText>
 							</Value>
 							<Value>
 								<Name>Parameter.data1</Name>
@@ -2470,20 +2482,5 @@
 				</Ethernet>
 			</Device>
 		</Io>
-		<SymbolWatch>
-			<Variable>TIXC^Untitled1^Untitled1_Obj1 (Module1)^Outputs^count</Variable>
-		</SymbolWatch>
 	</Project>
-	<Mappings>
-		<MappingInfo Identifier="{02010020-0030-0201-1000-010130000101}" Id="#x02030010" Watchdog="28000000040000000400000004000000"/>
-		<OwnerA Name="TIRC^TcCOM Objects^Object1 (TestForceSim)">
-			<OwnerB Name="TIXC^Untitled1^Untitled1_Obj1 (Module1)">
-				<Link VarA="TestForceSim_U^F1" VarB="Outputs^F1"/>
-				<Link VarA="TestForceSim_U^F2" VarB="Outputs^F2"/>
-				<Link VarA="TestForceSim_U^F3" VarB="Outputs^F3"/>
-				<Link VarA="TestForceSim_U^T1" VarB="Outputs^T1"/>
-				<Link VarA="TestForceSim_U^count" VarB="Outputs^count"/>
-			</OwnerB>
-		</OwnerA>
-	</Mappings>
 </TcSmProject>

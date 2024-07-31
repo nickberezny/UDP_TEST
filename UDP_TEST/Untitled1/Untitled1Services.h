@@ -48,6 +48,9 @@ typedef struct _Module1Outputs
 	double F3;
 	double T1;
 	double count;
+	double T2;
+	double T3;
+	
 } Module1Outputs, *PModule1Outputs;
 #pragma pack(pop)
 

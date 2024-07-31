@@ -1823,7 +1823,7 @@
 						</Parameters>
 						<DataAreas>
 							<DataArea>
-								<AreaNo AreaType="InputDst" ShowSymbols="true">0</AreaNo>
+								<AreaNo AreaType="InputDst">0</AreaNo>
 								<Name>Inputs</Name>
 								<ContextId>1</ContextId>
 								<ByteSize>12</ByteSize>
@@ -1847,10 +1847,10 @@
 								</Symbol>
 							</DataArea>
 							<DataArea>
-								<AreaNo AreaType="OutputSrc" ShowSymbols="true">1</AreaNo>
+								<AreaNo AreaType="OutputSrc">1</AreaNo>
 								<Name>Outputs</Name>
 								<ContextId>1</ContextId>
-								<ByteSize>52</ByteSize>
+								<ByteSize>68</ByteSize>
 								<Symbol>
 									<Name>Value</Name>
 									<BitSize>32</BitSize>
@@ -1899,6 +1899,18 @@
 									<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
 									<BitOffs>352</BitOffs>
 								</Symbol>
+								<Symbol>
+									<Name>T2</Name>
+									<BitSize>64</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+									<BitOffs>416</BitOffs>
+								</Symbol>
+								<Symbol>
+									<Name>T3</Name>
+									<BitSize>64</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+									<BitOffs>480</BitOffs>
+								</Symbol>
 							</DataArea>
 						</DataAreas>
 						<InterfacePointers>
@@ -1917,7 +1929,7 @@
 						<ParameterValues>
 							<Value>
 								<Name>TraceLevelMax</Name>
-								<EnumText>tlVerbose</EnumText>
+								<EnumText>tlAlways</EnumText>
 							</Value>
 							<Value>
 								<Name>Parameter.data1</Name>
@@ -2470,16 +2482,5 @@
 				</Ethernet>
 			</Device>
 		</Io>
-		<SymbolWatch>
-			<Variable>TIXC^Untitled1^Untitled1_Obj1 (Module1)^Outputs^count</Variable>
-		</SymbolWatch>
 	</Project>
-	<Mappings>
-		<MappingInfo Identifier="{02010020-0030-0201-1000-010130000101}" Id="#x02030010" Watchdog="28000000040000000400000004000000"/>
-		<OwnerA Name="TIRC^TcCOM Objects^Object1 (TestForceSim)">
-			<OwnerB Name="TIXC^Untitled1^Untitled1_Obj1 (Module1)">
-				<Link VarA="TestForceSim_U^F1" VarB="Outputs^F1"/>
-			</OwnerB>
-		</OwnerA>
-	</Mappings>
 </TcSmProject>
